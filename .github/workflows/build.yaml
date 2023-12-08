@@ -22,7 +22,8 @@ jobs:
   
     - name: Compile, build and push
       run: |
+        mvn package  # Fügt den Maven-Package-Befehl hinzu
+        docker build --tag mxcxvm/pet-clinic:latest -f Dockerfile  # Fügt den Docker-Build-Befehl hinzu
         #### AUFGABE 3 COMPILE, DOCKER BUILD UND PUSH
           # hier ist Platz für maven package und docker build
-          mvn package
-          docker build --tag mxcxvm/pet-clinic/pet-clinic:latest -f Dockerfile
+          
